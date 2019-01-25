@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+	<style>
+
+	</style>
+{% endblock %}
+{% block body %}
+	<h2>Book Store</h2>
+	<div>
+		<a href="{{path('add')}}">Add</a>
+	</div>	
+	<table border="2" cellspacing="5px" cellpadding="5px">
+		<tr>
+			<td>Id</td>
+			<td>Name</td>
+			<td>Author</td>
+			<td>Price</td>
+			<td colspan="2">Action</td>
+		</tr>
+		{% for x in data %}
+			<tr>
+				<td>{{x.id}}</td>
+				<td>{{x.Name}}</td>
+				<td>{{x.Author}}</td>
+				<td>{{x.Price}}</td>
+				<td><a href="{{path('update',{'id':x.id})}}">Edit</a></td>
+				<td><a href="{{path('delete',{'id':x.id})}}">Delete</a></td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}			

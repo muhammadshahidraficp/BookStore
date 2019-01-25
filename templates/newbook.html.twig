@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+	<style>
+
+	#simpleform{
+		width:600px;
+		border:2px solid grey;
+		padding:14px;
+	}
+	#simpleform label{
+		width:300px;
+		font-size:14px;
+		float:left;
+		text-align:right;
+		display:block;
+	}
+
+	#simpleform span{
+		width:10px;
+		font-size:11px;
+		color:grey;
+		text-align: right;
+		display:block;
+	}
+	#simpleform input{
+		width:250px;
+		font-size:14px;
+		font-family:verdana;
+		border: 1px solid grey;
+		height: 24px;
+		display: block;
+		margin: 0 0 10px 10px;
+	}
+		#simpleform textarea{
+		width:250px;
+		font-size:14px;
+		font-family:verdana;
+		border: 1px solid grey;
+		color: lightblue;
+		display: block;
+		margin: 0 0 20px 10px;
+		height:120px;
+	}
+		#simpleform select{
+			margin: 0 0 20px 10px;
+	}
+
+		#simpleform button{
+			clear:both;
+			margin-left: 250px;
+			background: grey;
+			color: #FFFFFF;
+			border:solid 1px #666666;
+			font-size: 16px;
+	}		
+	
+
+
+	</style>
+
+{% endblock %}
+
+
+
+
+{% block body%}
+<h3>Please enter details about new book</h3>
+<div id="simpleform">
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	{{ form_end(form) }}
+</div>	
+{% endblock %}	
