@@ -31,6 +31,11 @@ class Book
      */
     private $price;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $shelf;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +73,18 @@ class Book
     public function setPrice(string $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getShelf(): ?string
+    {
+        return $this->shelf;
+    }
+
+    public function setShelf(string $shelf): self
+    {
+        $this->shelf = $shelf;
 
         return $this;
     }

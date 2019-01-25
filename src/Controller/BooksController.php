@@ -44,6 +44,7 @@ class BooksController extends Controller{
        			->add('name',TextType::class)
        			->add('author',TextType::class)
        			->add('price',TextType::class)
+            ->add('shelf',TextType::class)
        			->add('save',SubmitType::class,array('label'=>'Submit'))
        			->getForm();	
 
@@ -82,6 +83,7 @@ class BooksController extends Controller{
        ->add('name',TextType::class)
             ->add('author',TextType::class)
             ->add('price',TextType::class)
+            ->add('shelf',TextType::class)
             ->add('save',SubmitType::class,array('label'=>'Submit'))
             ->getForm();
         $form->handleRequest($request);
